@@ -1,35 +1,374 @@
+@media screen and (max-width: 1820px)
+	.about
+		&__main-title
+			font-size: 100px
+			left: -120px
+@media screen and (max-width: 1460px)
+	.about
+		&__main-title
+			font-size: 90px
+			left: -30px
 @media screen and (max-width: 1199px)
 	.case
 		width: 950px
-	
+
 	.hidden-lg
 		display: block
-	
+
 	.hidden-md
 		display: none
+	body
+		font-size: 16px
+	.panel
+		&__nav
+			padding-right: 30px
+			width: calc(100% - 290px)
+		&__btn
+			width: 290px
+
+	.btn
+		font-size: 16px
+		&_small, &_normal, &_big
+			font-size: 16px
+		&_normal
+			height: 58px
+
+	.input
+		&__wrap
+			height: 58px
+			font-size: 16px
+		&__icon
+			margin-top: -3px
 
 
-	
+
+
+	.slider
+		&__item
+			height: 580px
+
+	.title
+		font-size: 32px
+		line-height: 36px
+
+	.about
+		padding-top: 50px
+		padding-bottom: 35px
+		&__main-title
+			display: none
+
+		&__content
+			width: 100%
+			padding-right: 0
+
+		&__text
+			margin-bottom: 25px
+
+
+
+		&__share
+			display: none
+
+	.advantages
+		&__item
+			width: 50% !important
+			text-align: center
+			margin-bottom: 25px
+		&__icon
+			justify-content: center
+			align-items: center
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 13px
+		&__title
+			font-size: 18px
+
+	.services
+		padding-top: 50px
+		padding-bottom: 20px
+
+
+
+	.share
+		&__wrap
+			padding-top: 50px
+			margin-bottom: 40px
+
+		&__count
+			font-size: 140px
+
+	.reviews
+		padding-top: 40px
+		padding-bottom: 35px
+		&__control
+			margin-bottom: 35px
+
+		&__item
+			background: none
+		&__name
+			font-size: 21px
+
+		&__imgs
+			width: 230px
+
+		&__car
+			width: 200px
+
+	.certificates
+		padding-top: 40px
+		padding-bottom: 35px
+		&__control
+			margin-bottom: 35px
+
+	.contacts
+		&__wrap
+			width: 57%
+		&__map
+			width: 43%
+
+
+
+
+
+
 @media screen and (max-width: 992px)
 	.case
 		width: 750px
 
 	.hidden-md
-		display: block		
-	
+		display: block
+
 	.hidden-sm
 		display: none
 
+	.panel
+		&__nav
+			padding-right: 15px
+			width: calc(100% - 160px)
+		&__btn
+			width: 160px
 
-	
-@media screen and (max-width: 767px)
+	.services
+		&__item
+			width: calc(50% - 30px)
+
+	.share
+		padding-bottom: 35px
+		&__wrap
+				padding-top: 35px
+				margin-bottom: 20px
+		&__count
+			display: none
+
+		&__content
+			width: 100%
+			padding-left: 0
+
+		&__title
+			text-align: center
+
+		&__desc
+			font-size: 18px
+			text-align: center
+
+
+	.form
+		&_line
+			.form
+				&__body
+					margin-left: -7px
+					margin-right: -7px
+				&__input, &__btn
+					width: calc(33.333% - 14px)
+					margin-left: 7px
+					margin-right: 7px
+
+	.contacts
+		&__wrap, &__map
+			width: 100%
+
+		&__content
+			max-width: 750px
+			width: 100%
+			margin-left: auto
+			margin-right: auto
+			padding-left: 15px
+			padding-right: 15px
+			padding-top: 25px
+			padding-bottom: 35px
+			text-align: center
+		&__address
+			margin-bottom: 15px
+			&-text
+				font-size: 16px
+		&__data
+			margin-bottom: 20px
+
+		&__btn
+			margin-left: auto
+			margin-right: auto
+			max-width: 280px
+
+	.footer
+		&__col
+			width: 100%
+			margin-bottom: 10px
+			text-align: center
+			&:last-of-type
+				margin-bottom: 0
+
+	.popup
+		&_small
+			padding-top: 25px
+		&__title
+			font-size: 28px
+			margin-bottom: 20px
+
+
+
+
+@media screen and (max-width: 780px)
 	.case
 		width: 100%
 
 	.hidden-sm
 		display: block
-	
+
 	.hidden-xs
 		display: none
-	
 
+	.panel
+		z-index: 1
+		position: absolute
+		top: 160px
+		left: 0
+		right: 0
+		background-color: transparent
+		&__nav
+			padding-right: 0
+			width: 100%
+			padding-top: 20px
+			padding-bottom: 20px
+			li
+				width: 100%
+				text-align: center
+				margin-bottom: 7px
+				&:last-of-type
+					margin-bottom: 0
+		&__btn
+			width: 100%
+			max-width: 280px
+			margin-left: auto
+			margin-right: auto
+
+	.header
+		background: url('../../img/car.png') no-repeat center
+		background-size: cover
+		padding-bottom: 230px
+		&__data
+			position: static
+		&__or
+			display: none
+		&__data
+			.case
+				flex-direction: column
+				justify-content: center
+				align-items: center
+
+		&__call
+			flex-direction: column
+
+		&__logo
+			margin-bottom: 10px
+
+
+		&__phones
+			font-size: 22px
+			line-height: 30px
+
+
+
+
+
+
+	.slider
+		display: none
+
+	.about
+		padding-top: 25px
+		padding-bottom: 10px
+
+
+	.title
+		font-size: 26px
+		line-height: 32px
+		text-align: center
+
+	.services
+		padding-top: 25px
+		padding-bottom: 20px
+		&__title
+			margin-bottom: 25px
+
+		&__item
+			width: 100%
+			height: 240px
+			margin-bottom: 20px
+
+		&__name
+			font-size: 21px
+			left: 15px
+			right: 15px
+
+	.form
+		&_line
+			.form
+				&__body
+					margin-left: 0
+					margin-right: 0
+				&__input
+					margin-bottom: 13px
+
+				&__input, &__btn
+					width: 100%
+					margin-left: 0
+					margin-right: 0
+
+	.reviews, .certificates
+		&__control
+			flex-direction: column
+
+		&__arrows
+			margin-top: 20px
+
+	.reviews
+		&__control
+			margin-bottom: 25px
+
+		&__head
+			flex-direction: column
+			max-width: 230px
+			margin-left: auto
+			margin-right: auto
+			width: 100%
+
+		&__data
+			padding-left: 0
+			padding-top: 10px
+			width: 100%
+
+
+
+	.arrows
+		.slick-arrow
+			width: 35px
+			height: 35px
+			&::before
+				transform: scale(.8)
+
+	.popup
+		&_small
+			padding-left: 15px
+			padding-right: 15px
+		&__title
+			font-size: 24px

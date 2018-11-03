@@ -3,12 +3,14 @@
 @import fonts.sass
 @import grid.sass
 @import '../../libs/fancybox/dist/jquery.fancybox.css'
+@import '../../libs/slick-carousel/slick/slick.css'
+@import '../../libs/animate.css/animate.css'
 
 
 /* Global settings */
-$font-size: 16px
-$font-family-1: 'Tahoma', sans-serif
-$color-1: #000
+$font-size: 18px
+$font-family-1: 'Museo Sans Cyrl', sans-serif
+$color-1: #4f4f4f
 
 
 *, :before, :after
@@ -22,6 +24,7 @@ body
 	font-family: $font-family-1
 	color: $color-1
 	background: white
+	font-weight: 500
 
 
 
@@ -60,8 +63,34 @@ input, textarea, button
 		display: block
 		font-size: $font-size
 		font-family: $font-family-1
-		background: white
 		width: 100%
+		background-color: #fff
+		height: 64px
+		padding-left: 50px
+		padding-right: 30px
+		&::placeholder
+			opacity: 1
+			color: #4f4f4f
+	&__icon
+		position: absolute
+		top: 50%
+		left: 18px
+		transform: translateY(-50%)
+		img
+			width: 17px
+	&_border
+		.input
+			&__wrap
+				border: 1px solid #dedede
+
+	&_error
+		.input
+			&__wrap
+				background-color: #f3cec0
+				&::placeholder
+					color: #ff4800
+
+
 
 
 .textarea
@@ -84,6 +113,20 @@ input, textarea, button
 	cursor: pointer
 	text-align: center
 	transition: .3s
+	&_orange
+		color: #fff
+		background-color: #ff4800
+		&:hover
+			background-color: #ce3a00
+	&_small
+		height: 50px
+		font-weight: 300
+	&_normal
+		height: 64px
+		font-weight: 700
+	&_big
+		height: 70px
+		font-weight: 700
 
 .input input, .textarea textarea
 	transition: .3s
@@ -108,9 +151,572 @@ input, .btn, .slick-slide, textarea
 
 
 .main-wrap
-	// overflow-x: hidden
+	overflow-x: hidden
 
 
+.panel
+	color: #fff
+	background-color: #000000
+	a
+		color: #fff
+	&__nav
+		width: calc(100% - 340px)
+		padding-top: 13px
+		padding-bottom: 13px
+		padding-right: 65px
+		ul
+			justify-content: space-between
+		li
+			&.selected
+				a
+					color: #ff4800
+		a
+			&:hover
+				color: #ff4800
+
+	&__btn
+		width: 340px
+
+
+.header
+	position: relative
+	&__data
+		z-index: 1
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		padding-top: 30px
+	&__call
+		color: #fff
+
+	&__phones
+		line-height: 24px
+		a
+			color: #fff
+	&__or
+		margin-left: 27px
+		margin-right: 27px
+		font-weight: 300
+
+	&__callback
+		color: #ff4800
+		border-color: #ff4800
+		&:hover
+			border-color: transparent
+
+
+
+
+
+
+
+
+.slider
+	&__list
+		width: 100%
+
+	&__item
+		position: relative
+		height: 900px
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		.case
+			height: 100%
+		&_3
+			color: #fff
+			padding-top: 210px
+			.slider
+
+
+	&__form
+		position: absolute
+		bottom: 26px
+		left: 0
+		right: 0
+
+
+.form
+	flex-direction: column
+	&_line
+		flex-direction: row
+		.form
+			&__body
+				margin-left: -15px
+				margin-right: -15px
+
+			&__input, &__btn
+				width: calc(33.333% - 30px)
+				margin-left: 15px
+				margin-right: 15px
+				margin-bottom: 0
+
+			&__btn
+				margin-top: 0
+
+
+	&__input, &__btn
+		width: 100%
+
+	&__input
+		margin-bottom: 16px
+
+	&__btn
+		margin-top: 10px
+
+	&__policy
+		font-size: 15px
+		color: #fff
+		padding-top: 11px
+		text-align: center
+		font-weight: 300
+		a
+			color: #fff
+			border-color: #fff
+			&:hover
+				border-color: transparent
+		&_gray
+			color: #9b9b9b
+			a
+				color: #9b9b9b
+				border-color: #9b9b9b
+
+
+
+
+
+.title
+	font-size: 46px
+	font-weight: 900
+	color: #000000
+
+
+.about
+	padding-top: 80px
+	padding-bottom: 80px
+	&__content
+		width: 685px
+
+	&__content, &__share
+		position: relative
+		z-index: 2
+
+	&__content
+		padding-right: 30px
+
+	&__title
+		margin-bottom: 15px
+
+
+	&__text
+		line-height: 26px
+		font-weight: 300
+		margin-bottom: 45px
+		p
+			margin-bottom: 15px
+			&:last-of-type
+				margin-bottom: 0
+
+
+	&__share
+		width: calc(100% - 685px)
+		&-img
+			width: 100%
+			height: 690px
+			background-size: cover
+			background-position: center
+			background-repeat: no-repeat
+		&-btn
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+
+
+
+
+
+
+	&__main-title
+		position: absolute
+		z-index: 1
+		font-size: 150px
+		font-weight: 900
+		color: #f4f4f4
+		left: -316px
+		bottom: 54px
+
+
+.advantages
+	&__item
+		width: 39%
+		margin-bottom: 34px
+		&:nth-of-type(even)
+			width: 61%
+
+	&__icon
+		width: 61px
+		height: 63px
+		display: flex
+		align-items: center
+		flex-direction: column
+		margin-bottom: 20px
+	&__title
+		font-size: 20px
+		font-weight: 900
+		text-transform: uppercase
+		color: #ff4800
+		margin-bottom: 4px
+	&__text
+		font-weight: 300
+
+
+.services
+	color: #fff
+	background-color: #000000
+	padding-top: 90px
+	padding-bottom: 70px
+	&__title
+		color: #fff
+		margin-bottom: 50px
+
+	&__list
+		margin-left: -15px
+		margin-right: -15px
+
+	&__item
+		position: relative
+		width: calc(33.333% - 30px)
+		margin-left: 15px
+		margin-right: 15px
+		height: 360px
+		margin-bottom: 30px
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+
+	&__name
+		position: absolute
+		bottom: 28px
+		left: 30px
+		right: 30px
+		font-size: 24px
+		font-weight: 900
+
+
+.share
+	padding-bottom: 80px
+	&__wrap
+		padding-top: 90px
+		margin-bottom: 60px
+
+	&__count
+		width: 475px
+		text-align: center
+		font-size: 180px
+		line-height: 140px
+		font-weight: 900
+		color: #ff4800
+
+	&__content
+		width: calc(100% - 475px)
+		margin-top: -8px
+		padding-left: 25px
+
+	&__desc
+		font-size: 22px
+		font-weight: 300
+		margin-top: 7px
+
+
+.reviews
+	padding-top: 90px
+	padding-bottom: 95px
+	background-color: #f4f4f4
+	&__control
+		margin-bottom: 60px
+
+	&__title
+		max-width: 570px
+
+	&__list
+		margin-left: -15px
+		margin-right: -15px
+		.slick-slide
+			padding-left: 15px
+			padding-right: 15px
+
+	&__item
+		background: url('../../img/commas.png') no-repeat right 10px
+
+
+	&__imgs
+		position: relative
+		width: 260px
+		height: 175px
+
+	&__car
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 230px
+
+	&__data
+		width: calc(100% - 260px)
+		padding-top: 30px
+		padding-left: 20px
+
+	&__name
+		font-size: 24px
+		font-weight: 900
+		color: #000000
+		margin-bottom: 11px
+
+	&__details
+		font-weight: 300
+
+	&__body
+		padding-top: 19px
+
+	&__text
+		font-style: italic
+		font-weight: 300
+		line-height: 26px
+
+
+
+.certificates
+	padding-top: 90px
+	padding-bottom: 90px
+	&__control
+		margin-bottom: 55px
+	&__title
+		max-width: 540px
+
+	&__list
+		margin-left: -14px
+		margin-right: -14px
+
+	&__item
+		&:hover
+			transform: scale(.95)
+
+
+	&__img
+		width: 200px
+		height: 275px
+		position: relative
+		margin-left: auto
+		margin-right: auto
+		&::before
+			content: ''
+			width: 200px
+			height: 275px
+			position: absolute
+			display: block
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: 1
+			background: url('../../img/border.png') no-repeat center
+
+
+.contacts
+	background-color: #141414
+	overflow: hidden
+	&__wrap, &__map
+		width: 50%
+
+	&__map
+		&-wrap
+			height: 580px
+
+	&__content
+		width: 570px
+		margin-left: auto
+		color: #fff
+		padding-top: 90px
+
+	&__title
+		color: #fff
+		margin-bottom: 15px
+
+	&__address
+		line-height: 26px
+		font-weight: 300
+		margin-bottom: 50px
+		&-text
+			font-size: 24px
+		&-link
+			a
+				color: #ff4800
+				border-color: #ff4800
+				&:hover
+					border-color: transparent
+
+	&__data
+		font-weight: 300
+		line-height: 26px
+		margin-bottom: 33px
+		ul
+			li
+				width: 100%
+				margin-bottom: 10px
+				&:last-of-type
+					margin-bottom: 0
+		.email
+			color: #ff4800
+			border-color: #ff4800
+			&:hover
+				border-color: transparent
+
+	&__btn
+		max-width: 360px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.arrows
+	.slick-arrow
+		width: 50px
+		height: 50px
+		border: 1px solid #000000
+		background: none
+		font-size: 0
+		cursor: pointer
+		transition: .3s
+		&::before
+			content: ''
+			display: block
+			margin-left: auto
+			margin-right: auto
+			display: inline-block
+			width: 0
+			height: 0
+			border-style: solid
+			transition: .3s
+		&:hover
+			background-color: #000000
+	.slick-prev
+		margin-right: -1px
+		&::before
+			border-width: 8.5px 9px 8.5px 0
+			border-color: transparent #000000 transparent transparent
+		&:hover
+			&::before
+				border-color: transparent #fff transparent transparent
+
+	.slick-next
+		&::before
+			border-width: 8.5px 0 8.5px 9px
+			border-color: transparent transparent transparent #000000
+		&:hover
+			&::before
+				border-color: transparent transparent transparent #fff
+
+
+
+.footer
+	padding-top: 16px
+	padding-bottom: 16px
+	&__col
+		font-size: 14px
+		font-weight: 300
+		color: #000000
+		width: 33.333%
+	&__copy
+
+	&__policy
+		text-align: center
+
+	&__dev
+		text-align: right
+
+
+
+	a
+		color: #000000
+		border-color: #000000
+		&:hover
+			border-color: transparent
+
+
+
+
+.popup
+	display: none
+	color: #000000
+	font-family: $font-family-1
+	&_small
+		width: 455px
+		padding: 55px 45px 35px
+	&_large
+		width: 1140px
+		.popup
+			&__wrap
+				max-height: 400px
+	&__title
+		font-size: 36px
+		font-weight: 900
+		text-align: center
+		margin-bottom: 30px
+
+	&__text
+		h2
+			font-size: 20px
+			margin-bottom: 10px
+		h3
+			font-size: 18px
+			font-size: 10px
+
+		p
+			margin-bottom: 15px
+		&_mid
+			text-align: center
+	.fancybox-close-small
+		color: #000
+		transition: .3s
+		padding: 0
+		svg
+			opacity: 1
+		&:hover
+			color: #ff4800
+	.form
+
+
+
+.service
+	padding-top: 45px
+	&__title
+		margin-bottom: 40px
+		text-align: center
+	&__table
+		overflow-x: auto
+		table
+			border-collapse: collapse
+			width: auto !important
+			margin-left: auto
+			margin-right: auto
+			display: table !important
+		td, th
+			border: 1px solid #000
+			padding: 3px 5px
+
+		.xl70, .xl77, .xl78, .xl81, .xl84, .xl66, .xl67
+			font-weight: 700
+			text-align: center
 
 
 
